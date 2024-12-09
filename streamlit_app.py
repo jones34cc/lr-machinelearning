@@ -40,12 +40,12 @@ with st.sidebar:
 
   data={'gender',gender,
         'age',age,
-        'hypertension':hypertension,
-        'heart_disease':heart_disease,
-        'smoking_history':smoking_history,
-        'bmi':bmi,
-        'HbA1c_level':HbA1c_level
-        'blood_glucose_level':blood_glucose_level}
+        'hypertension',hypertension,
+        'heart_disease',heart_disease,
+        'smoking_history',smoking_history,
+        'bmi',bmi,
+        'HbA1c_level',HbA1c_level
+        'blood_glucose_level',blood_glucose_level}
   input_df=pd.DataFrame(data,index=[0])
   input_features=pd.concat([input_df,X],axis=0)
 
