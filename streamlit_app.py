@@ -92,9 +92,26 @@ df_prediction_proba.rename(columns={0:'No Diabetes !! Congratulations🎉🎉',
                                  1:'Diabetes😱😱Better Luck Next Time :('})
 
 
-#Display Predicted species
+#Display Predicted results
 st.subheader('Diabetes Prediction')
-df_prediction_proba
+st.dataframe(df_prediction_proba,
+             column_config={
+               'No Diabetes !! Congratulations🎉🎉':st.column_config.ProgressColumn(
+                 'No Diabetes !! Congratulations🎉🎉',
+                 format='%f',
+                 width='medium',
+                 min_value=0,
+                 max_value=1
+                 ),
+                 'Diabetes😱😱Better Luck Next Time :(':st.column_config.ProgressColumn(
+                 'Diabetes😱😱Better Luck Next Time :(',
+                 format='%f',
+                 width='medium',
+                 min_value=0,
+                 max_value=1
+                 ),
+                 },hide_index=True)
+                 
 
 diabetes_features=np.array(['No Diabetes !! Congratulations🎉🎉','Diabetes😱😱Better Luck Next Time :('])
 st.success(str(diabetes_features[prediction][0]))
