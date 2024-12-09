@@ -49,11 +49,11 @@ with st.sidebar:
   input_df=pd.DataFrame(data,index=[0])
   input_features=pd.concat([input_df,X],axis=0)
   
-with st.expander('Input Features')
-st.write('**Recent Data**')
-input_df
-st.write('**Combined Data**')
-input_features
+with st.expander('Input Features'):
+  st.write('**Recent Data**')
+  input_df
+  st.write('**Combined Data**')
+  input_features
   
   
   
