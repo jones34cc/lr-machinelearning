@@ -48,17 +48,21 @@ with st.sidebar:
         'blood_glucose_level':blood_glucose_level}
   input_df=pd.DataFrame(data,index=[0])
   input_features=pd.concat([input_df,X],axis=0)
+
+  #encode
+  encode=['gender','smoking_history']
+  df_features=pd.get_dummies(input_features,prefix=encode)
+  input_row=df_features[:1]
   
 with st.expander('Input Features'):
   st.write('**Recent Data**')
   input_df
   st.write('**Combined Data**')
   input_features
+  st.write('Encoded Input Features')
+  input_row
 
-#encode
-encode=['gender','smoking_history']
-df_features=pd.get_dummies(input_features,prefix=encode)
-df_features[:1]
+
 
   
   
