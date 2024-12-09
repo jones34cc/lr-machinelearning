@@ -54,6 +54,11 @@ with st.expander('Input Features'):
   input_df
   st.write('**Combined Data**')
   input_features
+
+#encode
+encode=['gender','smoking_history']
+df_features=pd.get_dummies(input_features,prefix=encode)
+
   
   
   
