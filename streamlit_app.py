@@ -62,6 +62,7 @@ with st.expander('Input Features'):
   #encode x
   encode=['gender','smoking_history']
   df_features=pd.get_dummies(input_features,prefix=encode)
+  X=df_features[1:]
   input_row=df_features[:1]
 
   
@@ -78,7 +79,7 @@ with st.expander('Data preparation'):
 #Model Training and inference
 ##Train the ml model
 clf=RandomForestClassifier()
-clf.fit(df_features,Y)
+clf.fit(X,Y)
 
 ##Apply model to make predictions
 prediction=clf.predicts(input_row)
