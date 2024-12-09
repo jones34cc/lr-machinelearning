@@ -90,7 +90,7 @@ df_prediction_proba=pd.DataFrame(prediction_proba)
 df_prediction_proba.columns=['No Diabetes !! Congratulations🎉🎉','Diabetes😱😱Better Luck Next Time :(']
 df_prediction_proba.rename(columns={0:'No Diabetes !! Congratulations🎉🎉',
                                  1:'Diabetes😱😱Better Luck Next Time :('})
-#df_prediction_proba
+df_prediction_proba
 
 #Display Predicted species
 st.subheader('Diabetes Prediction')
