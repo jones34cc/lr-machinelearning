@@ -49,7 +49,7 @@ with st.sidebar:
   input_df=pd.DataFrame(data,index=[0])
   input_features=pd.concat([input_df,X],axis=0)
   
- input_df
+input_df
 #input_features
   
   
