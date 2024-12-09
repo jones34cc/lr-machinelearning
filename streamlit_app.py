@@ -20,3 +20,13 @@ with st.expander('Data'):
 
 with st.expander('Data Visualization'):
   st.scatter_chart(data=df,x='bmi',y='blood_glucose_level',color='diabetes')
+
+#Data preparations
+with st.sidebar:
+  st.header('Input features')
+  #gender,age,hypertension,heart_disease,smoking_history,bmi,HbA1c_level,blood_glucose_level
+  gender=st.selectbox('Gender',('Male','Female'))
+  age=st.slider("Input you age ",0,100)
+  hypertension=st.radio('Hypertension',(0,1))
+  
+  
