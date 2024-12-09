@@ -28,7 +28,7 @@ with st.sidebar:
   gender=st.selectbox('Gender',('Male','Female'))
   age=st.slider("Adjust your age ",0,100)
   hypertension=st.radio('Hypertension',(0,1))
-  heart_disease=st.radio('Heart_Disease'),(0,1))
+  heart_disease=st.radio('Heart_Disease',(0,1))
 
   #'never': 0, 'No Info': 1, 'current': 2, 'former': 3, 'ever': 4, 'not current': 5
   smoking_history=st.selectbox('Smoking_History',('never','No Info','current','former','ever','not current'))
