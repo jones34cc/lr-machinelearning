@@ -10,12 +10,12 @@ with st.expander('Data'):
   df
 
   st.write('**X**')
-  X=df.drop('diabetes',axis=1)
-  X
+  X_raw=df.drop('diabetes',axis=1)
+  X_raw
 
   st.write('**Y**')
-  Y=df.diabetes
-  Y
+  Y_raw=df.diabetes
+  Y_raw
 
 
 with st.expander('Data Visualization'):
@@ -47,20 +47,23 @@ with st.sidebar:
         'HbA1c_level':HbA1c_level,
         'blood_glucose_level':blood_glucose_level}
   input_df=pd.DataFrame(data,index=[0])
-  input_features=pd.concat([input_df,X],axis=0)
+  input_features=pd.concat([input_df,X_raw],axis=0)
 
   #encode
   encode=['gender','smoking_history']
   df_features=pd.get_dummies(input_features,prefix=encode)
   input_row=df_features[:1]
+
+  
   
 with st.expander('Input Features'):
   st.write('**Recent Data**')
   input_df
   st.write('**Combined Data**')
   input_features
-  st.write('Encoded Input Features')
+  st.write('**Encoded Input Features**')
   input_row
+  
 
 
 
