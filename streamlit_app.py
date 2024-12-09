@@ -12,3 +12,11 @@ with st.expander('Data'):
 st.write('**X**')
 X=df.drop('diabetes',axis=1)
 X
+
+st.write('**Y**')
+Y=df.diabetes
+Y
+
+
+with st.expander('Data Visualization'):
+  st.scatter_chart(data=df,x='bmi',y='blood_glucose_level',color='diabetes')
