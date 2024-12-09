@@ -47,8 +47,10 @@ with st.sidebar:
         'HbA1c_level',HbA1c_level,
         'blood_glucose_level',blood_glucose_level}
   input_df=pd.DataFrame(data,index=[0])
+  input_features=pd.concat([input_df,X],axis=0)
+  
 
-input_df
+input_features
   
   
   
