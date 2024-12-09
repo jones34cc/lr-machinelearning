@@ -21,7 +21,7 @@ with st.expander('Data'):
 with st.expander('Data Visualization'):
   st.scatter_chart(data=df,x='bmi',y='blood_glucose_level',color='diabetes')
 
-#Data preparations
+#Input features
 with st.sidebar:
   st.header('Input features')
   #gender,age,hypertension,heart_disease,smoking_history,bmi,HbA1c_level,blood_glucose_level
@@ -49,21 +49,28 @@ with st.sidebar:
   input_df=pd.DataFrame(data,index=[0])
   input_features=pd.concat([input_df,X_raw],axis=0)
 
-  #encode
+with st.expander('Input Features'):
+  st.write('**Recent Data**')
+  input_df
+  st.write('**Combined Data**')
+  input_features
+
+
+  #Data preparation
+  #encode x
   encode=['gender','smoking_history']
   df_features=pd.get_dummies(input_features,prefix=encode)
   input_row=df_features[:1]
 
   
   
-with st.expander('Input Features'):
-  st.write('**Recent Data**')
-  input_df
-  st.write('**Combined Data**')
-  input_features
-  st.write('**Encoded Input Features**')
+
+
+with st.expander('Data preparation'):
+  st.write('**Encoded X (input features)**')
   input_row
-  
+  st.write('**Encoded Y**')
+  Y
 
 
 
