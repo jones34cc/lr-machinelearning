@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 
 st.title('🐱‍🏍Diabetes Prediction App ')
-st.info('This app builds a machine learning model')
+st.info('This app builds a machine learning model that predicts Diabetes percentage taking few parameters!!Enjoy')
 
 with st.expander('Data'):
   st.write('**Raw data**')
