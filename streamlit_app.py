@@ -19,4 +19,4 @@ with st.expander('Data'):
 
 
 with st.expander('Data Visualization'):
-  st.scatter_chart(data=df,x='bmi',y='blood_glucose_level',color='diabetes')
+  st.line_chart(data=df,x='bmi',y='blood_glucose_level',color='diabetes')
