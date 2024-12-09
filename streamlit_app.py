@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
 
 st.title('🐱‍🏍Diabetes Prediction App ')
 st.info('This app builds a machine learning model')
@@ -73,6 +75,16 @@ with st.expander('Data preparation'):
   Y
 
 
+#Model Training and inference
+##Train the ml model
+clf=RandomForestClassifier()
+clf.fit(X_raw,Y)
+
+##Apply model to make predictions
+prediction=clf.predicts(input_row)
+prediction_proba=clf.predict_proba(input_row)
+
+prediction_proba
 
   
   
