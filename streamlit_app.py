@@ -58,6 +58,7 @@ with st.expander('Input Features'):
 #encode
 encode=['gender','smoking_history']
 df_features=pd.get_dummies(input_features,prefix=encode)
+df_features[:1]
 
   
   
