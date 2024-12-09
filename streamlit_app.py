@@ -14,8 +14,8 @@ with st.expander('Data'):
   X_raw
 
   st.write('**Y**')
-  Y_raw=df.diabetes
-  Y_raw
+  Y=df.diabetes
+  Y
 
 
 with st.expander('Data Visualization'):
