@@ -9,13 +9,13 @@ with st.expander('Data'):
   df=pd.read_csv('https://raw.githubusercontent.com/jones34cc/diabetes-data/refs/heads/main/diabetes_prediction_dataset.csv')
   df
 
-st.write('**X**')
-X=df.drop('diabetes',axis=1)
-X
+  st.write('**X**')
+  X=df.drop('diabetes',axis=1)
+  X
 
-st.write('**Y**')
-Y=df.diabetes
-Y
+  st.write('**Y**')
+  Y=df.diabetes
+  Y
 
 
 with st.expander('Data Visualization'):
