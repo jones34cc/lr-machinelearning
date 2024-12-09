@@ -26,7 +26,14 @@ with st.sidebar:
   st.header('Input features')
   #gender,age,hypertension,heart_disease,smoking_history,bmi,HbA1c_level,blood_glucose_level
   gender=st.selectbox('Gender',('Male','Female'))
-  age=st.slider("Input you age ",0,100)
+  age=st.slider("Adjust your age ",0,100)
   hypertension=st.radio('Hypertension',(0,1))
+  heart_disease=st.radio('Heart_Disease'),(0,1))
+
+  #'never': 0, 'No Info': 1, 'current': 2, 'former': 3, 'ever': 4, 'not current': 5
+  smoking_history=st.selectbox('Smoking_History',('never','No Info','current','former','ever','not current'))
+  bmi=st.slider("Adjust your BMI ",6,80)
+  HbA1c_level=st.number_input('Enter your HbA1c blood level')
+  blood_glucose_level=st.number_input('Enter your Blood Glucose level')
   
   
