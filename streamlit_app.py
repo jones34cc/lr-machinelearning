@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 
@@ -86,10 +87,16 @@ prediction=clf.predict(input_row)
 prediction_proba=clf.predict_proba(input_row)
 
 df_prediction_proba=pd.DataFrame(prediction_proba)
-df_prediction_proba.columns=['No Diabetes Motherfucker','Die Already Bruv']
-df_prediction_proba.rename(columns={0:'No Diabetes Motherfucker',
-                                 1:'Die Already Bruv'})
-df_prediction_proba
+df_prediction_proba.columns=['No Diabetes !! Congratulations🎉🎉','Diabetes😱😱Better Luck Next Time :(']
+df_prediction_proba.rename(columns={0:'No Diabetes !! Congratulations🎉🎉',
+                                 1:'Diabetes😱😱Better Luck Next Time :('})
+#df_prediction_proba
+
+#Display Predicted species
+st.subheader('Diabetes Prediction')
+diabetes_features=np.array(['No Diabetes !! Congratulations🎉🎉','Diabetes😱😱Better Luck Next Time :('])
+st.success(str(diabetes_features[prediction][0]))
+
 
   
   
